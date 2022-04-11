@@ -1,0 +1,18 @@
+---
+- name: A01_Check_Status_Cumulus_Linux
+  hosts: leaf01
+  become: yes
+  gather_facts: no
+#  connection: local
+  environment:
+    PYTHONHTTPSVERIFY: 0
+
+  tasks:
+    - name: Set Common Vars
+      set_fact:
+        hostname: "leaf01"
+
+    - name: Check Status
+      import_role:
+        name: roles/Cumulus
+        tasks_from: check_system.yml
