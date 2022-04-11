@@ -5,10 +5,10 @@ import pandas as pd
 # 機器情報
 device = {
     'device_type':'linux',
-    'ip':'172.17.0.2',
-    'username':'root',
-    'password':'cumupasswd',
-    'secret':'cumpupasswd',
+    'ip':'x.x.x.x',
+    'username':'xxx',
+    'password':'xxx',
+    'secret':'xxx',
 }
 
 # コマンド入力
