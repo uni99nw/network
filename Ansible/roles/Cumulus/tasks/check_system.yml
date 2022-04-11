@@ -1,0 +1,23 @@
+---
+- name: Fetch System Status
+  command: net show system json
+  register: _re
+
+- name: Modify Vars1
+  set_fact:
+    re: "{{ _re.stdout | from_json }}"
+
+- name: Mpdify Vars2
+  set_fact:
+    scc_msg: "SUCCESS: Verify hostname"
+    err_msg: "ERROR: Hostname is not valid"
+    exp_hostname: "{{ hostname }}"
+    var_hostname: "{{ re.hostname }}"
+
+- name: Verify Hostname
+  fail:
+    msg: "{{err_msg}}"  
+  when: exp_hostname != var_hostname
+
+- debug: 
+    msg: "{{ scc_msg }}"
