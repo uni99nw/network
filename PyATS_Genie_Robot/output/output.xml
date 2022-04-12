@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.6.8 on linux)" generated="20220412 04:38:22.240" rpa="false" schemaversion="2">
+<suite id="s1" name="RobotTest" source="/home/auto/work/pyATS/TEST_PJ/RobotTest.robot">
+<kw name="Setup" type="SETUP">
+<kw name="use genie testbed &quot;${testbed}&quot;" library="genie.libs.robot.GenieRobot" sourcename="use genie testbed &quot;${testbed}&quot;">
+<doc>*DEPRECATED* Please use the "use testbed "${testbed}" keyword instead.</doc>
+<msg timestamp="20220412 04:38:23.522" level="WARN">Keyword 'genie.libs.robot.GenieRobot.use genie testbed "${testbed}"' is deprecated. Please use the "use testbed "${testbed}" keyword instead.</msg>
+<msg timestamp="20220412 04:38:23.594" level="INFO">+------------------------------------------------------------------------------+
+|                            Genie datafiles used:                             |
++------------------------------------------------------------------------------+</msg>
+<msg timestamp="20220412 04:38:23.595" level="INFO">Trigger datafile          | </msg>
+<msg timestamp="20220412 04:38:23.595" level="INFO">Verification  datafile    | </msg>
+<msg timestamp="20220412 04:38:23.595" level="INFO">Pts datafile              | /usr/local/lib/python3.6/site-packages/genie/libs/sdk/genie_yamls/pts_datafile.yaml</msg>
+<msg timestamp="20220412 04:38:23.595" level="INFO">Subsection datafile       | /usr/local/lib/python3.6/site-packages/genie/libs/sdk/genie_yamls/subsection_datafile.yaml</msg>
+<msg timestamp="20220412 04:38:23.595" level="INFO">Config datafile           | None</msg>
+<msg timestamp="20220412 04:38:23.627" level="WARN">Could not load the trigger datafile correctly, did you specify 'uut' device alias?</msg>
+<status status="PASS" starttime="20220412 04:38:23.522" endtime="20220412 04:38:23.627"/>
+</kw>
+<kw name="connect to device &quot;cum01&quot;" library="ats.robot.pyATSRobot" sourcename="connect to device &quot;${device:[^&quot;]+}&quot;">
+<doc>Connect to device connection as defined in testbed.yaml</doc>
+<msg timestamp="20220412 04:38:23.629" level="INFO">Connecting to device 'Device cum01, type linux'</msg>
+<msg timestamp="20220412 04:38:23.629" level="INFO">kwargs: {}</msg>
+<msg timestamp="20220412 04:38:24.298" level="INFO">2022-04-12 04:38:23,631: %UNICON-INFO: +++ cum01 logfile /tmp/cum01-cli-20220412T043823630.log +++
+
+2022-04-12 04:38:23,632: %UNICON-INFO: +++ Unicon plugin linux (unicon.plugins.linux) +++
+
+2022-04-12 04:38:23,637: %UNICON-INFO: +++ connection to spawn: ssh -l root 172.17.0.3 -p 22, id: 140540339044248 +++
+
+2022-04-12 04:38:23,638: %UNICON-INFO: connection to cum01
+root@172.17.0.3's password: 
+Linux 5f80d06d59f3 5.10.104-linuxkit #1 SMP Wed Mar 9 19:05:23 UTC 2022 x86_64
+Last login: Tue Apr 12 04:24:43 2022 from 172.17.0.4
+root@5f80d06d59f3:~# 
+
+2022-04-12 04:38:24,224: %UNICON-INFO: +++ initializing handle +++</msg>
+<status status="PASS" starttime="20220412 04:38:23.628" endtime="20220412 04:38:24.299"/>
+</kw>
+<status status="PASS" starttime="20220412 04:38:23.521" endtime="20220412 04:38:24.299"/>
+</kw>
+<test id="s1-t1" name="Send show version">
+<kw name="execute &quot;net show system&quot; on device &quot;cum01&quot;" library="unicon.robot.UniconRobot" sourcename="execute &quot;${command}&quot; on device &quot;${device:[^&quot;]+}&quot;">
+<var>${output}</var>
+<doc>Execute command on a specific device. "device" name is the name
+of the device from the testbed file</doc>
+<msg timestamp="20220412 04:38:24.302" level="INFO">Executing command net show system on device cum01 alias None</msg>
+<msg timestamp="20220412 04:38:25.763" level="INFO">2022-04-12 04:38:24,378: %UNICON-INFO: +++ cum01 with via 'cli': executing command 'net show system' +++
+net show system
+Hostname......... 5f80d06d59f3
+Build............ Cumulus Linux 4.3.0
+Uptime........... 1:32:04.350000
+ 
+Model............ Cumulus VX
+Memory........... 4GB
+Vendor Name...... Cumulus Networks
+Part Number...... 4.3.0
+Base MAC Address. 02:42:AC:11:00:03
+Serial Number.... 02:42:AC:11:00:03
+Product Name..... Containerised VX 
+root@5f80d06d59f3:~#</msg>
+<msg timestamp="20220412 04:38:25.763" level="INFO">${output} = Hostname......... 5f80d06d59f3
+Build............ Cumulus Linux 4.3.0
+Uptime........... 1:32:04.350000
+ 
+Model............ Cumulus VX
+Memory........... 4GB
+Vendor Name...... Cumulus Networks
+Par...</msg>
+<status status="PASS" starttime="20220412 04:38:24.302" endtime="20220412 04:38:25.763"/>
+</kw>
+<status status="PASS" starttime="20220412 04:38:24.300" endtime="20220412 04:38:25.765"/>
+</test>
+<status status="PASS" starttime="20220412 04:38:22.241" endtime="20220412 04:38:25.768"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="RobotTest">RobotTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220412 04:38:23.522" level="WARN">Keyword 'genie.libs.robot.GenieRobot.use genie testbed "${testbed}"' is deprecated. Please use the "use testbed "${testbed}" keyword instead.</msg>
+<msg timestamp="20220412 04:38:23.627" level="WARN">Could not load the trigger datafile correctly, did you specify 'uut' device alias?</msg>
+</errors>
+</robot>
