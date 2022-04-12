@@ -1,4 +1,3 @@
-# robot check_system_info.robot
 *** Settings ***
 Library	ats.robot.pyATSRobot
 Library	genie.libs.robot.GenieRobot
@@ -8,10 +7,12 @@ Suite setup    Setup
 
 *** Variables ***
 ${testbed}    testbed.yml
+${hostname}   leaf01
 
 *** Test Cases ***
-Send show system
-    ${output}=    execute "net show system" on device "cum01"
+Send net show system
+    ${output} =    execute "net show system" on device "cum01"
+    Should Contain  ${output}  ${hostname}
 
 *** Keywords ***
 Setup
