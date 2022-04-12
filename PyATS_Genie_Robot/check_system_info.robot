@@ -10,7 +10,7 @@ Suite setup    Setup
 ${testbed}    testbed.yml
 
 *** Test Cases ***
-Send show version
+Send show system
     ${output}=    execute "net show system" on device "cum01"
 
 *** Keywords ***
