@@ -1,89 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.6.8 on linux)" generated="20220412 07:02:56.171" rpa="false" schemaversion="2">
-<suite id="s1" name="Check System Info" source="/home/auto/work/pyATS/TEST_PJ/check_system_info.robot">
+<robot generator="Robot 4.1.3 (Python 3.6.8 on linux)" generated="20220412 07:27:23.460" rpa="false" schemaversion="2">
+<suite id="s1" name="01 Verify Info" source="/home/auto/work/pyATS/TEST_PJ/01_verify_info.robot">
 <kw name="Setup" type="SETUP">
-<kw name="use genie testbed &quot;${testbed}&quot;" library="genie.libs.robot.GenieRobot" sourcename="use genie testbed &quot;${testbed}&quot;">
-<doc>*DEPRECATED* Please use the "use testbed "${testbed}" keyword instead.</doc>
-<msg timestamp="20220412 07:02:57.406" level="WARN">Keyword 'genie.libs.robot.GenieRobot.use genie testbed "${testbed}"' is deprecated. Please use the "use testbed "${testbed}" keyword instead.</msg>
-<msg timestamp="20220412 07:02:57.462" level="INFO">+------------------------------------------------------------------------------+
-|                            Genie datafiles used:                             |
-+------------------------------------------------------------------------------+</msg>
-<msg timestamp="20220412 07:02:57.462" level="INFO">Trigger datafile          | </msg>
-<msg timestamp="20220412 07:02:57.462" level="INFO">Verification  datafile    | </msg>
-<msg timestamp="20220412 07:02:57.462" level="INFO">Pts datafile              | /usr/local/lib/python3.6/site-packages/genie/libs/sdk/genie_yamls/pts_datafile.yaml</msg>
-<msg timestamp="20220412 07:02:57.463" level="INFO">Subsection datafile       | /usr/local/lib/python3.6/site-packages/genie/libs/sdk/genie_yamls/subsection_datafile.yaml</msg>
-<msg timestamp="20220412 07:02:57.463" level="INFO">Config datafile           | None</msg>
-<msg timestamp="20220412 07:02:57.497" level="WARN">Could not load the trigger datafile correctly, did you specify 'uut' device alias?</msg>
-<status status="PASS" starttime="20220412 07:02:57.406" endtime="20220412 07:02:57.498"/>
+<kw name="use testbed &quot;${testbed}&quot;" library="ats.robot.pyATSRobot" sourcename="use testbed &quot;${testbed}&quot;">
+<doc>Load testbed YAML file and instantiate testbed object</doc>
+<status status="PASS" starttime="20220412 07:27:24.939" endtime="20220412 07:27:24.988"/>
 </kw>
 <kw name="connect to device &quot;cum01&quot;" library="ats.robot.pyATSRobot" sourcename="connect to device &quot;${device:[^&quot;]+}&quot;">
 <doc>Connect to device connection as defined in testbed.yaml</doc>
-<msg timestamp="20220412 07:02:57.500" level="INFO">Connecting to device 'Device cum01, type linux'</msg>
-<msg timestamp="20220412 07:02:57.500" level="INFO">kwargs: {}</msg>
-<msg timestamp="20220412 07:02:57.956" level="INFO">2022-04-12 07:02:57,502: %UNICON-INFO: +++ cum01 logfile /tmp/cum01-cli-20220412T070257501.log +++
+<msg timestamp="20220412 07:27:24.989" level="INFO">Connecting to device 'Device cum01, type linux'</msg>
+<msg timestamp="20220412 07:27:24.989" level="INFO">kwargs: {}</msg>
+<msg timestamp="20220412 07:27:25.413" level="INFO">2022-04-12 07:27:24,992: %UNICON-INFO: +++ cum01 logfile /tmp/cum01-cli-20220412T072724991.log +++
 
-2022-04-12 07:02:57,502: %UNICON-INFO: +++ Unicon plugin linux (unicon.plugins.linux) +++
+2022-04-12 07:27:24,992: %UNICON-INFO: +++ Unicon plugin linux (unicon.plugins.linux) +++
 
-2022-04-12 07:02:57,507: %UNICON-INFO: +++ connection to spawn: ssh -l root 172.17.0.3 -p 22, id: 140025275763624 +++
+2022-04-12 07:27:25,000: %UNICON-INFO: +++ connection to spawn: ssh -l root 172.17.0.3 -p 22, id: 140684380283344 +++
 
-2022-04-12 07:02:57,508: %UNICON-INFO: connection to cum01
+2022-04-12 07:27:25,002: %UNICON-INFO: connection to cum01
 root@172.17.0.3's password: 
 Linux leaf01 5.10.104-linuxkit #1 SMP Wed Mar 9 19:05:23 UTC 2022 x86_64
-Last login: Tue Apr 12 06:49:20 2022 from 172.17.0.4
+Last login: Tue Apr 12 07:25:47 2022 from 172.17.0.4
 root@leaf01:~# 
 
-2022-04-12 07:02:57,887: %UNICON-INFO: +++ initializing handle +++</msg>
-<status status="PASS" starttime="20220412 07:02:57.499" endtime="20220412 07:02:57.956"/>
+2022-04-12 07:27:25,337: %UNICON-INFO: +++ initializing handle +++</msg>
+<status status="PASS" starttime="20220412 07:27:24.988" endtime="20220412 07:27:25.413"/>
 </kw>
-<status status="PASS" starttime="20220412 07:02:57.406" endtime="20220412 07:02:57.957"/>
+<status status="PASS" starttime="20220412 07:27:24.938" endtime="20220412 07:27:25.414"/>
 </kw>
 <test id="s1-t1" name="Initialize">
 <kw name="use genie testbed &quot;${testbed}&quot;" library="genie.libs.robot.GenieRobot" sourcename="use genie testbed &quot;${testbed}&quot;">
 <doc>*DEPRECATED* Please use the "use testbed "${testbed}" keyword instead.</doc>
-<msg timestamp="20220412 07:02:57.960" level="WARN">Keyword 'genie.libs.robot.GenieRobot.use genie testbed "${testbed}"' is deprecated. Please use the "use testbed "${testbed}" keyword instead.</msg>
-<msg timestamp="20220412 07:02:57.977" level="INFO">+------------------------------------------------------------------------------+
+<msg timestamp="20220412 07:27:25.417" level="WARN">Keyword 'genie.libs.robot.GenieRobot.use genie testbed "${testbed}"' is deprecated. Please use the "use testbed "${testbed}" keyword instead.</msg>
+<msg timestamp="20220412 07:27:25.440" level="INFO">+------------------------------------------------------------------------------+
 |                            Genie datafiles used:                             |
 +------------------------------------------------------------------------------+</msg>
-<msg timestamp="20220412 07:02:57.977" level="INFO">Trigger datafile          | </msg>
-<msg timestamp="20220412 07:02:57.977" level="INFO">Verification  datafile    | </msg>
-<msg timestamp="20220412 07:02:57.977" level="INFO">Pts datafile              | /usr/local/lib/python3.6/site-packages/genie/libs/sdk/genie_yamls/pts_datafile.yaml</msg>
-<msg timestamp="20220412 07:02:57.978" level="INFO">Subsection datafile       | /usr/local/lib/python3.6/site-packages/genie/libs/sdk/genie_yamls/subsection_datafile.yaml</msg>
-<msg timestamp="20220412 07:02:57.978" level="INFO">Config datafile           | None</msg>
-<msg timestamp="20220412 07:02:58.014" level="WARN">Could not load the trigger datafile correctly, did you specify 'uut' device alias?</msg>
-<status status="PASS" starttime="20220412 07:02:57.960" endtime="20220412 07:02:58.015"/>
+<msg timestamp="20220412 07:27:25.440" level="INFO">Trigger datafile          | </msg>
+<msg timestamp="20220412 07:27:25.440" level="INFO">Verification  datafile    | </msg>
+<msg timestamp="20220412 07:27:25.441" level="INFO">Pts datafile              | /usr/local/lib/python3.6/site-packages/genie/libs/sdk/genie_yamls/pts_datafile.yaml</msg>
+<msg timestamp="20220412 07:27:25.441" level="INFO">Subsection datafile       | /usr/local/lib/python3.6/site-packages/genie/libs/sdk/genie_yamls/subsection_datafile.yaml</msg>
+<msg timestamp="20220412 07:27:25.441" level="INFO">Config datafile           | None</msg>
+<msg timestamp="20220412 07:27:25.472" level="WARN">Could not load the trigger datafile correctly, did you specify 'uut' device alias?</msg>
+<status status="PASS" starttime="20220412 07:27:25.416" endtime="20220412 07:27:25.472"/>
 </kw>
 <kw name="connect to all devices" library="ats.robot.pyATSRobot">
 <doc>Connect to all devices</doc>
-<msg timestamp="20220412 07:02:58.017" level="INFO">Connecting to device 'Device cum01, type linux'</msg>
-<msg timestamp="20220412 07:02:58.017" level="INFO">kwargs: {}</msg>
-<msg timestamp="20220412 07:02:58.499" level="INFO">2022-04-12 07:02:58,019: %UNICON-INFO: +++ cum01 logfile /tmp/cum01-cli-20220412T070258018.log +++
+<msg timestamp="20220412 07:27:25.475" level="INFO">Connecting to device 'Device cum01, type linux'</msg>
+<msg timestamp="20220412 07:27:25.475" level="INFO">kwargs: {}</msg>
+<msg timestamp="20220412 07:27:25.959" level="INFO">2022-04-12 07:27:25,477: %UNICON-INFO: +++ cum01 logfile /tmp/cum01-cli-20220412T072725477.log +++
 
-2022-04-12 07:02:58,019: %UNICON-INFO: +++ Unicon plugin linux (unicon.plugins.linux) +++
+2022-04-12 07:27:25,478: %UNICON-INFO: +++ Unicon plugin linux (unicon.plugins.linux) +++
 
-2022-04-12 07:02:58,027: %UNICON-INFO: +++ connection to spawn: ssh -l root 172.17.0.3 -p 22, id: 140025275799760 +++
+2022-04-12 07:27:25,487: %UNICON-INFO: +++ connection to spawn: ssh -l root 172.17.0.3 -p 22, id: 140684369026408 +++
 
-2022-04-12 07:02:58,028: %UNICON-INFO: connection to cum01
+2022-04-12 07:27:25,489: %UNICON-INFO: connection to cum01
 root@172.17.0.3's password: 
 Linux leaf01 5.10.104-linuxkit #1 SMP Wed Mar 9 19:05:23 UTC 2022 x86_64
-Last login: Tue Apr 12 07:02:57 2022 from 172.17.0.4
+Last login: Tue Apr 12 07:27:25 2022 from 172.17.0.4
 root@leaf01:~# 
 
-2022-04-12 07:02:58,430: %UNICON-INFO: +++ initializing handle +++</msg>
-<status status="PASS" starttime="20220412 07:02:58.016" endtime="20220412 07:02:58.499"/>
+2022-04-12 07:27:25,891: %UNICON-INFO: +++ initializing handle +++</msg>
+<status status="PASS" starttime="20220412 07:27:25.474" endtime="20220412 07:27:25.960"/>
 </kw>
-<status status="PASS" starttime="20220412 07:02:57.957" endtime="20220412 07:02:58.501"/>
+<status status="PASS" starttime="20220412 07:27:25.414" endtime="20220412 07:27:25.961"/>
 </test>
 <test id="s1-t2" name="Check Hostname">
 <kw name="execute &quot;net show system&quot; on device &quot;cum01&quot;" library="unicon.robot.UniconRobot" sourcename="execute &quot;${command}&quot; on device &quot;${device:[^&quot;]+}&quot;">
 <var>${res_system}</var>
 <doc>Execute command on a specific device. "device" name is the name
 of the device from the testbed file</doc>
-<msg timestamp="20220412 07:02:58.506" level="INFO">Executing command net show system on device cum01 alias None</msg>
-<msg timestamp="20220412 07:02:58.835" level="INFO">2022-04-12 07:02:58,577: %UNICON-INFO: +++ cum01 with via 'cli': executing command 'net show system' +++
+<msg timestamp="20220412 07:27:25.966" level="INFO">Executing command net show system on device cum01 alias None</msg>
+<msg timestamp="20220412 07:27:26.313" level="INFO">2022-04-12 07:27:26,036: %UNICON-INFO: +++ cum01 with via 'cli': executing command 'net show system' +++
 net show system
 Hostname......... leaf01
 Build............ Cumulus Linux 4.3.0
-Uptime........... 3:56:45.820000
+Uptime........... 4:21:14.960000
  
 Model............ Cumulus VX
 Memory........... 4GB
@@ -93,36 +83,36 @@ Base MAC Address. 02:42:AC:11:00:03
 Serial Number.... 02:42:AC:11:00:03
 Product Name..... Containerised VX 
 root@leaf01:~#</msg>
-<msg timestamp="20220412 07:02:58.836" level="INFO">${res_system} = Hostname......... leaf01
+<msg timestamp="20220412 07:27:26.313" level="INFO">${res_system} = Hostname......... leaf01
 Build............ Cumulus Linux 4.3.0
-Uptime........... 3:56:45.820000
+Uptime........... 4:21:14.960000
  
 Model............ Cumulus VX
 Memory........... 4GB
 Vendor Name...... Cumulus Networks
 Part Numb...</msg>
-<status status="PASS" starttime="20220412 07:02:58.505" endtime="20220412 07:02:58.836"/>
+<status status="PASS" starttime="20220412 07:27:25.965" endtime="20220412 07:27:26.313"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${res_system}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220412 07:02:58.837" endtime="20220412 07:02:58.838"/>
+<status status="PASS" starttime="20220412 07:27:26.314" endtime="20220412 07:27:26.315"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${res_system}</arg>
 <arg>${hostname}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220412 07:02:58.839" endtime="20220412 07:02:58.839"/>
+<status status="PASS" starttime="20220412 07:27:26.316" endtime="20220412 07:27:26.317"/>
 </kw>
-<status status="PASS" starttime="20220412 07:02:58.503" endtime="20220412 07:02:58.840"/>
+<status status="PASS" starttime="20220412 07:27:25.963" endtime="20220412 07:27:26.318"/>
 </test>
 <test id="s1-t3" name="Check Interface">
 <kw name="execute &quot;net show interface&quot; on device &quot;cum01&quot;" library="unicon.robot.UniconRobot" sourcename="execute &quot;${command}&quot; on device &quot;${device:[^&quot;]+}&quot;">
 <var>${res_int}</var>
 <doc>Execute command on a specific device. "device" name is the name
 of the device from the testbed file</doc>
-<msg timestamp="20220412 07:02:58.844" level="INFO">Executing command net show interface on device cum01 alias None</msg>
-<msg timestamp="20220412 07:02:59.084" level="INFO">2022-04-12 07:02:58,920: %UNICON-INFO: +++ cum01 with via 'cli': executing command 'net show interface' +++
+<msg timestamp="20220412 07:27:26.323" level="INFO">Executing command net show interface on device cum01 alias None</msg>
+<msg timestamp="20220412 07:27:26.578" level="INFO">2022-04-12 07:27:26,397: %UNICON-INFO: +++ cum01 with via 'cli': executing command 'net show interface' +++
 net show interface
 State  Name  Spd  MTU    Mode      LLDP  Summary
 -----  ----  ---  -----  --------  ----  -----------------
@@ -130,26 +120,26 @@ UP     lo    N/A  65536  Loopback        IP: 127.0.0.1/8
 UP     eth0  10G  1500   Mgmt            IP: 172.17.0.3/16
 
 root@leaf01:~#</msg>
-<msg timestamp="20220412 07:02:59.084" level="INFO">${res_int} = State  Name  Spd  MTU    Mode      LLDP  Summary
+<msg timestamp="20220412 07:27:26.578" level="INFO">${res_int} = State  Name  Spd  MTU    Mode      LLDP  Summary
 -----  ----  ---  -----  --------  ----  -----------------
 UP     lo    N/A  65536  Loopback        IP: 127.0.0.1/8
 UP     eth0  10G  1500   Mgmt   ...</msg>
-<status status="PASS" starttime="20220412 07:02:58.843" endtime="20220412 07:02:59.084"/>
+<status status="PASS" starttime="20220412 07:27:26.323" endtime="20220412 07:27:26.579"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${res_int}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220412 07:02:59.086" endtime="20220412 07:02:59.089"/>
+<status status="PASS" starttime="20220412 07:27:26.580" endtime="20220412 07:27:26.581"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${res_int}</arg>
 <arg>${mgmt_ip}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220412 07:02:59.090" endtime="20220412 07:02:59.091"/>
+<status status="PASS" starttime="20220412 07:27:26.582" endtime="20220412 07:27:26.583"/>
 </kw>
-<status status="PASS" starttime="20220412 07:02:58.841" endtime="20220412 07:02:59.092"/>
+<status status="PASS" starttime="20220412 07:27:26.321" endtime="20220412 07:27:26.584"/>
 </test>
-<status status="PASS" starttime="20220412 07:02:56.173" endtime="20220412 07:02:59.098"/>
+<status status="PASS" starttime="20220412 07:27:23.461" endtime="20220412 07:27:26.586"/>
 </suite>
 <statistics>
 <total>
@@ -158,13 +148,11 @@ UP     eth0  10G  1500   Mgmt   ...</msg>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Check System Info">Check System Info</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="01 Verify Info">01 Verify Info</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220412 07:02:57.406" level="WARN">Keyword 'genie.libs.robot.GenieRobot.use genie testbed "${testbed}"' is deprecated. Please use the "use testbed "${testbed}" keyword instead.</msg>
-<msg timestamp="20220412 07:02:57.497" level="WARN">Could not load the trigger datafile correctly, did you specify 'uut' device alias?</msg>
-<msg timestamp="20220412 07:02:57.960" level="WARN">Keyword 'genie.libs.robot.GenieRobot.use genie testbed "${testbed}"' is deprecated. Please use the "use testbed "${testbed}" keyword instead.</msg>
-<msg timestamp="20220412 07:02:58.014" level="WARN">Could not load the trigger datafile correctly, did you specify 'uut' device alias?</msg>
+<msg timestamp="20220412 07:27:25.417" level="WARN">Keyword 'genie.libs.robot.GenieRobot.use genie testbed "${testbed}"' is deprecated. Please use the "use testbed "${testbed}" keyword instead.</msg>
+<msg timestamp="20220412 07:27:25.472" level="WARN">Could not load the trigger datafile correctly, did you specify 'uut' device alias?</msg>
 </errors>
 </robot>
