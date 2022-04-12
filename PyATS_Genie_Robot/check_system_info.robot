@@ -4,7 +4,6 @@ Library	genie.libs.robot.GenieRobot
 Library	unicon.robot.UniconRobot
 Suite setup    Setup
 
-
 *** Variables ***
 ${testbed}    testbed.yml
 ${hostname}   leaf01
